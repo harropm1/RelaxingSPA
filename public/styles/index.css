@@ -1,0 +1,17 @@
+.hidden {
+    display: none;
+}
+.addBackground {
+    background: url("/images/spa-header.jpg") center no-repeat;
+    background-size: 100%;
+}
+.jumbotron {
+    height: 550px;
+    width: auto;
+}
+ul {
+    list-style-type: none;
+}
+#dropdownMenuButton {
+    margin-bottom: 15px;
+}
