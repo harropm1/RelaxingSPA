@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="icon" type="image/png" href="images/robicon.png">
+    <link rel="stylesheet" href="styles/index.css">
+
+    <title>SPA Spa</title>
+</head>
+
+<body>
+    <!--nav bar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Spa Office</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" id="viewCategories" href="#">Search our Services</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container-fluid">
+            <div class="jumbotron">
+                <h1 class="display-4">Welcome to SPA Spa</h1>
+                <p class="lead">Here are SPA Spa, we are all about you. Come and enjoy many services, including massage, hair cuts, and skin care.</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="hidden" id="categoryContainer">
+                <h2>SPA Spa Service Selector</h2>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select your spa service</button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="categoryList"></div>
+                </div>
+            </div>
+
+            <div class="hidden" id="serviceContainer">
+                <h3 id="categoryName">&nbsp;</h3>
+                <ul id="serviceList"></ul>
+
+                <div class="hidden col-md-4" id="serviceCard">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h4 class="card-title" id="ServiceName">&nbsp;</h4>
+                            <p class="card-text" id="ServiceID">&nbsp;</p>
+                            <p class="card-text" id="Description">&nbsp;</p>
+                            <p class="card-text" id="Price">&nbsp;</p>
+                            <p class="card-text" id="Minutes">&nbsp;</p>
+                            <small class="card-text" id="CategoryName">&nbsp;</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <script src="scripts/scripts.js"></script>
+</body>
+
+</html>
