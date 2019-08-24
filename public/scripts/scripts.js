@@ -2,10 +2,12 @@
 
 $(function ()
 {
+    getCategories();
+
     $("#viewCategories").on("click", function ()
     {
-        getCategories();
         $("#viewCategories").prop("disabled", true);
+        $("#categoryContainer").show();
 
         $("#jumbotron").hide();
 
@@ -21,12 +23,13 @@ $(function ()
         $("#categoryContainer").hide();
         $("#serviceCard").hide();
         $("#servicesContainer").hide();
-        $("#serviceImage").hide();
+        $("#serviceImageCard").hide();
     })
 });
 
 function getCategories()
 {
+
     let categories;
     $.getJSON('/api/categories/', (data) =>
     {
@@ -44,14 +47,13 @@ function getCategories()
                     getServiceList(categories[i].Value);
                 }));
         }
-        $("#categoryContainer").show();
     });
 }
 
 function getServiceList(category)
 {
     $("#serviceCard").hide();
-    $("#serviceImage").hide();
+    $("#serviceImageCard").hide();
     $("#serviceList").html("");
 
     $.getJSON(`/api/services/bycategory/${category}`, (servicesArray) => 
@@ -77,37 +79,38 @@ function getSpecificService(serviceId)
     {
         $("#ServiceName").html("Service Name: " + service.ServiceName);
         $("#ServiceID").html("Service Id: " + service.ServiceID);
-        $("#CategoryName").html("Category Name: " + service.CategoryName);
+        $("#CategoryName").html("\nCategory Name: " + service.CategoryName);
         $("#Description").html("Description: " + service.Description);
         $("#Price").html("Price: $" + Number(service.Price).toFixed(2));
         $("#Minutes").html("Length of Service (Minutes): " + service.Minutes);
 
         $("#serviceCard").show();
-        let image = $("#serviceImage");
-        image.show();
+        $("#serviceImageCard").show();
+        $("#serviceImage").show();
+        $("#serviceImage").html("");
 
-        switch (service.CategoryName.val())
+        switch (service.CategoryName)
         {
             case "Acupuncture":
-                image.attr("src", "images/accupuncture-sm.jpg");
+                $("#serviceImage").append($("<img class='card-img-top' alt='Spa Image' src='images/accupuncture-sm.jpg'/>"));
                 break;
             case "Body Treatments":
-                image.attr("src", "images/body-sm.jpg");
+                $("#serviceImage").append($("<img class='card-img-top' alt='Spa Image' src='images/body-sm.jpg'/>"));
                 break;
             case "Hair Salon":
-                image.attr("src", "images/hair-sm.jpg");
+                $("#serviceImage").append($("<img class='card-img-top' alt='Spa Image' src='images/hair-sm.jpg'/>"));
                 break;
             case "Massage and Bodywork":
-                image.attr("src", "images/massage-sm.jpg");
+                $("#serviceImage").append($("<img class='card-img-top' alt='Spa Image' src='images/massage-sm.jpg'/>"));
                 break;
             case "Nail Salon":
-                image.attr("src", "images/nails-sm.jpg");
+                $("#serviceImage").append($("<img class='card-img-top' alt='Spa Image' src='images/nails-sm.jpg'/>"));
                 break;
             case "Skin Care":
-                image.attr("src", "images/skin-sm.jpg");
+                $("#serviceImage").append($("<img class='card-img-top' alt='Spa Image' src='images/skin-sm.jpg'/>"));
                 break;
             default:
-                image.attr("src", "images/small-spa2.jpg");
+                $("#serviceImage").append($("<img class='card-img-top' alt='Spa Image' src='images/small-spa2.jpg'/>"));
         }
     });
 }
