@@ -8,8 +8,8 @@ This site only has one page, but the rest of the features will be dynamically ge
 - a spa service category select
 - a list of available spa services
 - details about all spa services
-- pictures (hopefully)
+- pictures for each category of service
 
 
 # Access
-After loading the project to your computer, you will need to open the command prompt. You will need to navigate to the folder for this particular project, then type "node server.js". The command prompt should return "App listening at port 8081". From here, you will need to go to http://localhost:8081/index.html to view the project.
+After loading the project to your computer, you will need to open the command prompt. You will need to navigate to the folder for this particular project, then type "node server.js". The command prompt should return "App listening at port 8081". From here, you will need to go to http://localhost:8081/ to view the project.

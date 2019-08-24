@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+    <!--Favicon and my Stylesheet-->
     <link rel="icon" type="image/png" href="images/robicon.png">
     <link rel="stylesheet" href="styles/index.css">
 
@@ -24,7 +25,7 @@
             aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <div class="collapse navbar-collapse" id="navbarToggler">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item">
                     <a class="nav-link" id="viewCategories" href="#">Search our Services</a>
@@ -34,14 +35,18 @@
     </nav>
 
     <main>
+        <!--jumbotron image-->
         <div class="container-fluid">
             <div class="jumbotron addBackground" id="jumbotron">
             </div>
         </div>
+
+        <!--Header-->
         <div class="container">
             <h1 class="display-4 text-right">Welcome to SPA Spa</h1>
             <p class="lead text-right">Here at SPA Spa, we are all about you. Come and enjoy many services, including massages, hair cuts, and skin care.</p>
         </div>
+        <!--header and dropdown button-->
         <div class="container">
             <div class="hidden" id="categoryContainer">
                 <h2>SPA Spa Service Selector</h2>
@@ -53,6 +58,7 @@
                 </div>
             </div>
 
+            <!--card deck that includes (here) the dynamically created list of services-->
             <div class="card-deck">
                 <div class="hidden" id="servicesContainer">
                     <div class="card" style="width: 18rem;">
@@ -63,6 +69,7 @@
                         </ul>
                     </div>
                 </div>
+                <!--(here) the dynamically created card with the spa service details on it-->
                 <div class="hidden" id="serviceCard">
                     <div class="card" style="width: 18rem;">
                         <div class="card-body">
@@ -75,16 +82,17 @@
                         </div>
                     </div>
                 </div>
+                <!--(here) the dynamically created card with a picture for each service-->
                 <div class="hidden" id="serviceImageCard">
                     <div class="card" style="width: 18rem;" id="serviceImage">
                     </div>
                 </div>
             </div>
-
         </div>
     </main>
 
     <hr>
+    <!--footer-->
     <footer>
         <p>SPA Spa is run by Michelle Harrop, who worked on this site while participating in a puppy cuddle treatment.</p>
     </footer>
