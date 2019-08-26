@@ -1,7 +1,8 @@
 "use strict";
 
 /* This ready function calls the function get categories, which is passed no parameters.
-* This ready function also sets what should happen when the "View Categories" button (search our services in the html) is clicked.
+* This ready function also sets what should happen when the "View Categories" button 
+* (search our services in the html) is clicked.
 * It also sets what should happen if the "home" button (spa offices in the html) is clicked.
 */
 $(function ()
@@ -91,8 +92,10 @@ function getServiceList(category)
 
 /* 
 * This function makes a JSON call to the server. It then dynamically creates a card with data about a specific service.
-* @param - service - array = this the array that comes from the services.json file. It provides a link to the data about a specific service.
-* @param - servicdId - string = this is what the user clicked on from the services list generated above. It points to a specific service.
+* @param - service - array = this the array that comes from the services.json file. 
+* It provides a link to the data about a specific service.
+* @param - servicdId - string = this is what the user clicked on from the services list generated above. 
+* It points to a specific service.
 */
 
 function getSpecificService(serviceId)
